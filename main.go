@@ -237,7 +237,7 @@ func main() {
 			QueueStart: time.Now(),
 		}
 		stationQueue <- car
-		time.Sleep(time.Duration(rand.Intn(2)+1) * time.Millisecond)
+		time.Sleep(time.Duration(rand.Intn(int(config.Cars.ArivalMax)+1-int(config.Cars.ArivalMin)) + int(config.Cars.ArivalMin)))
 	}
 
 	wg.Wait()
