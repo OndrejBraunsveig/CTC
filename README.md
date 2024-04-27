@@ -1,1 +1,1 @@
-# CTC
+# Semestrální projekt
